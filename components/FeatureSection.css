@@ -1,0 +1,143 @@
+.feature-section {
+    padding: 80px 0;
+    position: relative;
+    overflow-x: clip;
+}
+
+.feature-section-top {
+    padding-top: 115px;
+    padding-bottom: 55px;
+}
+
+.feature-heading {
+    text-align: center;
+}
+
+.feature-text {
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 175%;
+    color: #868686;
+    margin-top: 24px;
+}
+
+.feature-row {
+    column-gap: 40px;
+}
+
+.feature-title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 170%;
+    color: #000;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.feature-highlight {
+    color: var(--primary);
+}
+
+.feature-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 170%;
+    color: #545454;
+    max-width: 460px;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.feature-image-col {
+    display: flex;
+    justify-content: center;
+}
+
+.feature-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.feature-section .container-wide {
+    position: relative;
+    max-width: 1440px;
+    overflow: hidden;
+}
+
+.feature-text-col,
+.feature-image-col {
+    position: relative;
+}
+
+.feature-image-col::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: min(360px, 40vw);
+    height: min(360px, 40vw);
+    background: url("../public/images/violet_elipse.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.45;
+    pointer-events: none;
+    max-width: 100%;
+    transform: translateZ(0);
+}
+
+.feature-row.flex-row-reverse .feature-image-col::after {
+    left: -10px;
+    right: auto;
+    background-image: url("../public/images/yellow_elipse.png");
+}
+
+@media (max-width: 768px) {
+    .feature-image-col::after {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .feature-section {
+        padding: 60px 0;
+    }
+
+    .feature-title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .feature-description {
+        text-align: center;
+        margin: 0 auto 24px;
+    }
+
+    .feature-image {
+        max-width: 320px;
+    }
+
+    .feature-row {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .feature-section .container-wide {
+        overflow: visible;
+    }
+
+    .feature-image-col {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    .feature-image {
+        margin: 0 auto;
+        display: block;
+    }
+}

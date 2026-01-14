@@ -1,0 +1,28 @@
+.cta-box {
+    padding: 64px 48px;
+}
+
+.cta-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.cta-desc {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.cta-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cta-button {
+    padding: 11px 35px !important;
+    border-radius: 10px !important;
+}

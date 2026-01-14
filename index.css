@@ -1,0 +1,210 @@
+/* =========================
+   CSS VARIABLES & BOOTSTRAP THEME
+   ========================= */
+
+:root {
+  --primary: #1090CB;
+  --primary-rgb: 16, 144, 203;
+
+  --text-dark: #000000;
+  --text-muted: #5C5C5C;
+
+  --bs-primary: var(--primary);
+  --bs-primary-rgb: var(--primary-rgb);
+}
+
+/* =========================
+   GLOBAL BASE
+   ========================= */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container-main>.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+/* @media (min-width: 1440px) {
+  body {
+    overflow-x: hidden;
+  }
+} */
+
+.section-padding {
+  padding: 96px 0;
+}
+
+h1,
+.h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+h2,
+.h2 {
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 160%;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+h3,
+.h3 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 170%;
+}
+
+h4,
+.h4 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 170%;
+  text-align: center;
+}
+
+/* Typography – Mobile */
+@media (max-width: 767px) {
+
+  h1,
+  .h1 {
+    font-size: 36px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 28px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 20px;
+  }
+}
+
+.container-main,
+.container-wide {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.container-main {
+  max-width: 1320px;
+  /* Bootstrap safe */
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.container-wide {
+  max-width: 1440px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
+/* Ensure navbar uses wide width */
+.navbar>.container-wide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* =========================
+   BUTTONS (BOOTSTRAP OVERRIDES)
+   ========================= */
+
+.btn-primary {
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: #0d82b8;
+  --bs-btn-hover-border-color: #0d82b8;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--primary);
+  --bs-btn-bg: #ffffff;
+  --bs-btn-border-color: var(--primary);
+
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: var(--primary);
+  --bs-btn-hover-border-color: var(--primary);
+}
+
+/* Navbar CTA button */
+.navbar .btn {
+  padding: 10px 27px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+/* =========================
+   NAVBAR BASE
+   ========================= */
+
+.navbar {
+  padding: 24px 0;
+  background-color: #ffffff;
+}
+
+/* Sticky navbar */
+.app-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background-color: #ffffff;
+}
+
+/* Ensure wide navbar */
+.navbar>.container-wide {
+  width: 100%;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .navbar-collapse {
+    margin-top: 24px;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .nav-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+  }
+}
